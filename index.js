@@ -28,7 +28,7 @@ const scrape = async () => {
 				answers.push(await button.getText());
 			}
 			fs.writeFileSync(`${quoraName}.txt`, answers.slice(0, maxAnswers).join("\n\n\n"));
-			console.log(`I expanded ${quoraName}'s last ${maxAnswers} answers, and wrote them to 'output.json'.\narf arf!.`);
+			console.log(`I expanded ${quoraName}'s last ${maxAnswers} answers, and wrote them to '${quoraName}.txt'.\narf arf!.`);
 			process.exit(0);
 		} else {
 			lastButton = buttons.length - 1;
